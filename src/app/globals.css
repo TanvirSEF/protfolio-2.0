@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1200px;
+  --font-primar: "JetBrains Mono", monospace;
+  --color-primar: #1c1c22;
+  --color-default: #00ff99;
+  --color-hover: #00e187;
+}
+@layer base {
+  body {
+    @apply font-primar bg-primar text-white leading-loose;
+  }
+}
