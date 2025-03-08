@@ -11,7 +11,7 @@
 }
 @layer base {
   body {
-    @apply font-primar bg-primar text-white leading-loose;
+    @apply font-primar bg-primar text-white leading-loose px-4 xl:px-0;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -21,5 +21,14 @@
   }
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px white;
+    color: transparent; /* Ensure text is transparent initially */
+  }
+  
+  .group:hover .text-outline {
+    -webkit-text-stroke: 1px #00ff99; /* Apply stroke on hover */
+    color: transparent; /* Keep text transparent */
   }
 }
