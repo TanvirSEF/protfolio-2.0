@@ -19,24 +19,93 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Hekto E-commerce Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, aperiam quidem veritatis neque, natus eum amet fuga similique perferendis rem id, ab vel iusto in.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/work/thumb1.png",
-    live: "",
-    github: "",
+      "Hekto is a modern and stylish e-commerce website designed for online furniture and lifestyle product sales. The website features an elegant UI/UX with a clean layout, making the shopping experience seamless and visually appealing.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "JavaScript" },
+      { name: "ReactJs" },
+      { name: "API" },
+      { name: "Redux" },
+    ],
+    image: "/work/thum-1.png",
+    live: "https://hekt.netlify.app/",
+    github: "https://github.com/TanvirSEF/hekto",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "project 2",
+    category: "frontend",
+    title: "Orebi E-commerce Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, aperiam quidem veritatis neque, natus eum amet fuga similique perferendis rem id, ab vel iusto in.",
+      "Orebi is a modern and stylish e-commerce website designed for online Products and lifestyle product sales. The website features an elegant UI/UX with a clean layout, making the shopping experience seamless and visually appealing.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "JavaScript" },
+      { name: "ReactJs" },
+      { name: "API" },
+      { name: "Redux" },
+    ],
+    image: "/work/thum-2.png",
+    live: "https://vocal-speculoos-58b983.netlify.app/",
+    github: "https://github.com/TanvirSEF/orebi",
+  },
+  {
+    num: "03",
+    category: "frontend",
+    title: "Emprise–Travel & Tour Booking Website",
+    description:
+      "Emprise is a modern and intuitive travel booking website designed to help users explore and book exciting travel experiences worldwide. With a clean and visually appealing layout, this project provides an immersive user experience for travelers.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/work/thumb1.png",
-    live: "",
-    github: "",
+    image: "/work/thumb-4.png",
+    live: "https://tanvirsef.github.io/Emprise/",
+    github: "https://github.com/TanvirSEF/Emprise",
+  },
+  {
+    num: "04",
+    category: "frontend",
+    title: "NewsPro – Modern News & Magazine Website",
+    description:
+      "NewsPro is a fully responsive and visually appealing news portal designed for delivering real-time news updates, trending stories, and category-based articles. This project provides a structured and engaging layout, ensuring a smooth reading experience for users.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
+    image: "/work/thumb-5.png",
+    live: "https://tanvirsef.github.io/Newspaper/",
+    github: "https://github.com/TanvirSEF/Newspaper",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "Stellar Website Solutions for Startups | Finsweet",
+    description:
+      "Finsweet specializes in building high-quality, conversion-focused websites for early-stage startups. Our expert team provides strategy, wireframing, design, and development services to create stunning digital experiences. Explore our portfolio, read client testimonials, and get in touch to bring your vision to life!",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
+    image: "/work/thumb-6.png",
+    live: "https://remarkable-sprite-d01388.netlify.app/",
+    github: "https://github.com/TanvirSEF/FinSweet-Project",
+  },
+  {
+    num: "06",
+    category: "frontend",
+    title: "Petroil - Leading Oil & Gas Industry Supplier",
+    description:
+      "Petroil has been a trusted name in the oil and gas industry since 1975, providing top-tier fuel distribution, refinery solutions, and industrial supply services. With a strong national presence, we specialize in modern refineries, fuel logistics, and industry partnerships. Explore our services, view our projects, and get in touch to learn more about our expertise.",
+    stack: [{ name: "Html 5" }, { name: "Tailwind Css" }, { name: "Reactjs" }],
+    image: "/work/thumb-7.png",
+    live: "https://beautiful-melba-8bc9d7.netlify.app/",
+    github: "https://github.com/TanvirSEF/petrol",
+  },
+  {
+    num: "07",
+    category: "frontend",
+    title: "BWFC – Simplified Business Payments & Financial Management",
+    description:
+      "BWFC offers an all-in-one solution for managing business payments and financial transactions with ease. Designed for growing businesses, our platform ensures seamless invoicing, quick payment processing, and secure financial management. Join 32k+ businesses that trust BWFC to streamline their financial operations. Get started today!",
+    stack: [{ name: "Html 5" }, { name: "Tailwind Css" }, { name: "Reactjs" }],
+    image: "/work/thumb-8.png",
+    live: "https://superlative-hotteok-b33b17.netlify.app/",
+    github: "https://github.com/TanvirSEF/BWFC-",
   },
 ];
 
@@ -63,7 +132,7 @@ const Work = () => {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-hover transition-all duration-500 capitalize">
-                {project.category} Project
+                {project.title} Project
               </h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
@@ -78,7 +147,7 @@ const Work = () => {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex gap-4 items-center">
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -90,7 +159,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
