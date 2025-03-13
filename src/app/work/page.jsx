@@ -25,7 +25,7 @@ const projects = [
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
-      { name: "JavaScript" },
+      { name: "ReactJs" },
       { name: "ReactJs" },
       { name: "API" },
       { name: "Redux" },
@@ -43,7 +43,7 @@ const projects = [
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
-      { name: "JavaScript" },
+      { name: "ReactJs" },
       { name: "ReactJs" },
       { name: "API" },
       { name: "Redux" },
@@ -135,10 +135,10 @@ const Work = () => {
                 {project.title} Project
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="lg:flex grid grid-cols-2 gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-default">
+                    <li key={index} className="text-[14px] text-default">
                       {item.name}
                       {index !== project.stack.length - 1 && ","}
                     </li>
